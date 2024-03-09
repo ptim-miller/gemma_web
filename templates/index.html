@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Language Model Test</title>
+    <script>
+        function showProgress() {
+          var x = document.getElementById("progress");
+          var y = document.getElementById("answerBlock");
+          x.style.display = "block";
+          y.innerHTML = "";
+        }
+    </script>
+    <link rel="stylesheet" href="static/custom.css">
+</head>
+<body>
+<form id="baseForm" action="/" method="POST">
+    <div class="comments">
+        <fieldset>
+            <legend>Select desired complexity of response:</legend>
+            <div>
+                <input type="radio" id="small" name="selected" value="100"/>
+                <label for="small">100 | </label>
+                <input type="radio" id="medium" name="selected" value="250" checked/>
+                <label for="medium">250 (default) | </label>
+                <input type="radio" id="large" name="selected" value="500"/>
+                <label for="large">500 | </label>
+                <input type="radio" id="huge" name="selected" value="2000"/>
+                <label for="huge">2000</label>
+            </div>
+        </fieldset>
+        <h3>User:</h3>
+        Ask a question or make request.<br>
+        <textarea name="user_input" cols="60" rows="10"></textarea>
+        <input class="buttonSubmit" type="submit" value="Query" onclick="showProgress()"/>
+        <br>
+        <img id="progress" alt="progress" src="static/progress.gif">
+    </div>
+</form>
+<form action="/" method="GET">
+    <h5></h5>
+    <div id="answerBlock" class="comments">
+        {{question}} ...<br><br>
+        {{answer}}
+    </div>
+</form>
+</body>
+</html>
