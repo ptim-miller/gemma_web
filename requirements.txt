@@ -1,0 +1,4 @@
+torch
+immutabledict
+sentencepiece
+Flask
