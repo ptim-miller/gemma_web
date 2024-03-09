@@ -1,5 +1,7 @@
+## Pytorch specific code to use Google's Gemma AI LLM models on a local computer  
+  
 <sub>*Copyright 2024, Paul T. Miller > For Academic Use  
-Gemma folder Copyright 2024 Google distributed under Apache License, V2</sub> 
+*Gemma folder Copyright 2024 Google distributed under Apache License, V2</sub> 
 
 <sub>Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
