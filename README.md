@@ -26,7 +26,7 @@ Code is provided to test gemma models on a local computer. Three methods are pro
 *** 
 ## Modify the parameters as desired
 + The output_size indicates the max you allow for model output.  
-+ Version options are '2b', '2b-it', '7b', 7b-it'. The 'it' in name indicates an Instruction Tuned model.   
++ Version options are '2b', '2b-it', '7b', 7b-it'. The 'it' in name indicates an instruction-tuned model.  
 + Machine - use 'cuda' if you have cuda installed with an Nvidia GPU, otherwise use 'cpu'.  
 + Download the desired model from https://www.kaggle.com/models/google/gemma/frameworks/pyTorch.   
 + Recommend starting with 2b-it. (Worked on simple laptop with RTX2060 6GB VRAM).  
