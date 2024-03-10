@@ -38,7 +38,7 @@ Code is provided to test gemma models on a local computer. Three methods are pro
 ## Recommended
 The code in this repository was tested with python 3.10, and Nvidia driver version 550.54.14.
   
-Install the following required packages:
+Install the following required packages (pip3 install ...):
 + torch
 + immutabledict
 + sentencepiece
