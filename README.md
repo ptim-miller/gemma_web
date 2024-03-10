@@ -29,8 +29,19 @@ Code is provided to test gemma models on a local computer. Three methods are pro
 + Version options are '2b', '2b-it', '7b', 7b-it'. The 'it' in name indicates an instruction-tuned model.  
 + Machine - use 'cuda' if you have cuda installed with an Nvidia GPU, otherwise use 'cpu'.  
 + Download the desired model from https://www.kaggle.com/models/google/gemma/frameworks/pyTorch.   
-+ Recommend starting with 2b-it. (Worked on simple laptop with RTX2060 6GB VRAM).  
++ Recommend starting with 2b-it. (Worked on a simple laptop with RTX2060 6GB VRAM).  
 + Extract contents from the downloaded archive.tar.gz and put the files under the 'model/\<version\>/' folder.  
 
   <img src="models/2b_it_pic.png">
+
+***
+## Recommended
+The code in this repository was tested with python 3.10, Nvidia driver version 550.54.14.
+  
+Install the following required packages:
++ torch
++ immutabledict
++ sentencepiece
++ Flask
+  
 
