@@ -23,12 +23,16 @@ limitations under the License.*</sub>
 ##### https://developer.nvidia.com/cudnn-downloads
   
 ## Install torch with cuda support (https://pytorch.org/get-started/locally/)
-#### For Windows: 
-pip3 install torch torchvision torchaudio immutabledict sentencepiece Flask --index-url https://download.pytorch.org/whl/cu121
-#### For Linux: 
-pip3 install torch torchvision torchaudio immutabledict sentencepiece Flask
-##### *or install using conda with: 
-conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+For Windows: 
++ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
++ pip3 install immutabledict sentencepiece Flask
+  
+For Linux: 
++ pip3 install torch torchvision torchaudio immutabledict sentencepiece Flask
++ pip3 install immutabledict sentencepiece Flask
+  
+Or install using Conda with: 
++ conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
   
 ***
 ## Methods to run
