@@ -14,7 +14,22 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.*</sub>
-
+  
+***
+# Get started
+## Install the latest NVIDIA system driver https://www.nvidia.com/download/index.aspx
+#### If you wish to add cuda and cudnn to your system:
+##### https://developer.nvidia.com/cuda-downloads
+##### https://developer.nvidia.com/cudnn-downloads
+  
+## Install torch with cuda support (https://pytorch.org/get-started/locally/)
+#### For Windows: 
+pip3 install torch torchvision torchaudio immutabledict sentencepiece Flask --index-url https://download.pytorch.org/whl/cu121
+#### For Linux: 
+pip3 install torch torchvision torchaudio immutabledict sentencepiece Flask
+##### *or install using conda with: 
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+  
 ***
 ## Methods to run
 Code is provided to test gemma models on a local computer. Three methods are provided:
@@ -37,11 +52,6 @@ Code is provided to test gemma models on a local computer. Three methods are pro
 ***
 ## Recommended
 The code in this repository was tested with python 3.10, and Nvidia driver version 550.54.14.
-  
-Install the following required packages (pip3 install ...):
-+ torch
-+ immutabledict
-+ sentencepiece
-+ Flask
+
   
 
