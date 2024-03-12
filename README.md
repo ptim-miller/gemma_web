@@ -45,18 +45,22 @@ Code is provided to test gemma models on a local computer. Three methods are pro
 *** 
 ## Add the large language model to the project
 + Version options are '2b', '2b-it', '7b', 7b-it'. The 'it' in name indicates an instruction-tuned model.   
-+ Download the desired model from https://www.kaggle.com/models/google/gemma/frameworks/pyTorch.   
++ Download the desired model from https://www.kaggle.com/models/google/gemma/frameworks/pyTorch.
+  
+  <img src="models/model_download.png">
+  
 + <b>Recommend starting with 2b-it<b>. (Worked on a simple laptop with RTX2060 6GB VRAM).  
 + Extract contents from the downloaded archive.tar.gz and put the files under the 'model/\<version\>/' folder.  
-
+  https://pureinfotech.com/extract-tar-gz-files-windows-11/
+  
   <img src="models/2b_it_pic.png">
-
+  
 *** 
 ## Modify the parameters in the code as desired
 + The output_size indicates the max allowed for model output. 
 + Machine - use 'cuda' if you have cuda installed with an Nvidia GPU, otherwise use 'cpu'.
 + Use of 'cpu' is not recommended and will be slow. Drop output_size down if using 'cpu'.
-+ Example code to change in main.py - model = GemmaModel(output_len=250, version='2b-it', machine='cuda')
++ Example code to change in main.py -> model = GemmaModel(output_len=250, version='2b-it', machine='cuda')
   
 ***
 ## Recommended
