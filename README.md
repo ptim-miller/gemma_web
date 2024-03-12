@@ -24,7 +24,7 @@ limitations under the License.*</sub>
   
 ## Install torch with cuda support (https://pytorch.org/get-started/locally/)
 For Windows: 
-+ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
++ pip3 install torch torchvision torchaudio --index-url https[]()://download.pytorch.org/whl/cu121
 + pip3 install immutabledict sentencepiece Flask
   
 For Linux: 
