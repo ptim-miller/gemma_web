@@ -1,4 +1,4 @@
-## Pytorch specific code to use Google's Gemma AI LLM models on a local computer  
+# Pytorch specific code to use Google's Gemma AI LLM models on a local computer  
   
 <sub>*Copyright 2024, Paul T. Miller > For Academic Use  
 *Gemma folder Copyright 2024 Google distributed under Apache License, V2</sub> 
@@ -41,18 +41,23 @@ Code is provided to test gemma models on a local computer. Three methods are pro
 + Jupyter Notebook (pytorch_gemma.ipynb)
 + Web UI (python3 web.py)
 + Command line (python3 main.py)
-
+  
 *** 
-## Modify the parameters as desired
-+ The output_size indicates the max you allow for model output.  
-+ Version options are '2b', '2b-it', '7b', 7b-it'. The 'it' in name indicates an instruction-tuned model.  
-+ Machine - use 'cuda' if you have cuda installed with an Nvidia GPU, otherwise use 'cpu'.  
+## Add the large language model to the project
++ Version options are '2b', '2b-it', '7b', 7b-it'. The 'it' in name indicates an instruction-tuned model.   
 + Download the desired model from https://www.kaggle.com/models/google/gemma/frameworks/pyTorch.   
-+ Recommend starting with 2b-it. (Worked on a simple laptop with RTX2060 6GB VRAM).  
++ <b>Recommend starting with 2b-it<b>. (Worked on a simple laptop with RTX2060 6GB VRAM).  
 + Extract contents from the downloaded archive.tar.gz and put the files under the 'model/\<version\>/' folder.  
 
   <img src="models/2b_it_pic.png">
 
+*** 
+## Modify the parameters in the code as desired
++ The output_size indicates the max allowed for model output. 
++ Machine - use 'cuda' if you have cuda installed with an Nvidia GPU, otherwise use 'cpu'.
++ Use of 'cpu' is not recommended and will be slow. Drop output_size down if using 'cpu'.
++ Example code to change in main.py - model = GemmaModel(output_len=250, version='2b-it', machine='cuda')
+  
 ***
 ## Recommended
 The code in this repository was tested with python 3.10, and Nvidia driver version 550.54.14.
