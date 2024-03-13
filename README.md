@@ -77,7 +77,7 @@ Code is provided to test gemma models on a local computer. Three methods are pro
    
 *** 
 ## Modify the parameters in the code as desired
-+ The output_size indicates the max allowed for model output. 
++ The output_len indicates the max allowed for model output. 
 + Machine - use 'cuda' if you have cuda installed with an Nvidia GPU, otherwise use 'cpu'.
 + Use of 'cpu' is not recommended and will be slow. Drop output_len down to 65 or so if using 'cpu'.
 + Example code to change in main.py -> model = GemmaModel(output_len=250, version='2b-it', machine='cuda')
