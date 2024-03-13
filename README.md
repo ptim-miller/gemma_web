@@ -34,26 +34,30 @@ For Linux:
 Or install using Conda with: 
 + conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
   
-***
-## Methods to run
-Code is provided to test gemma models on a local computer. Three methods are provided:
-
-+ Jupyter Notebook (pytorch_gemma.ipynb)
-+ Web UI (python3 web.py)
-+ Command line (python3 main.py)
-  
 *** 
 ## Add the large language model to the project
 + Version options are '2b', '2b-it', '7b', 7b-it'. The 'it' in name indicates an instruction-tuned model.   
 + Download the desired model from https://www.kaggle.com/models/google/gemma/frameworks/pyTorch.
   
-  <img src="models/model_download.png">
+  <img src="models/model_download.png" alt="file download" width="600">
   
 + <b>Recommend starting with 2b-it<b>. (Worked on a simple laptop with RTX2060 6GB VRAM).  
 + Extract contents from the downloaded archive.tar.gz and put the files under the 'model/\<version\>/' folder.  
   https://pureinfotech.com/extract-tar-gz-files-windows-11/
+
+  In Jupyter they look something like:  
+  <img src="models/2b_it_pic.png" alt="file view" width="300">  
+
+  In a file viewer they look something like:  
+  <img src="models/files.png" alt="file view" width="300">  
   
-  <img src="models/2b_it_pic.png">
+***
+## Methods to run
+Code is provided to test gemma models on a local computer. Three methods are provided:
+
++ Jupyter Notebook - In Jupyter, open pytorch_gemma.ipynb.
++ Web UI - Enter "python3 web.py" at command line in project and open IP address shown in a browser.
++ Command line - Enter "python3 main.py" at command line in project.
   
 *** 
 ## Modify the parameters in the code as desired
@@ -64,7 +68,7 @@ Code is provided to test gemma models on a local computer. Three methods are pro
   
 ***
 ## Recommended
-The code in this repository was tested with python 3.10, and Nvidia driver version 550.54.14.
+The code in this repository was tested with python 3.10 & 3.12, with Nvidia driver version 550.54.14.
 
   
 
