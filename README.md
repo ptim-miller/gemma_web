@@ -72,7 +72,7 @@ Code is provided to test gemma models on a local computer. Three methods are pro
    ```bash
    python3 main.py
    ```
-+ Jupyter Notebook - In Jupyter, open pytorch_gemma.ipynb.
++ Jupyter Notebook - In Jupyter, open pytorch_gemma.ipynb. https://www.anaconda.com/download/
   
    
 *** 
