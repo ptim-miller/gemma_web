@@ -24,15 +24,21 @@ limitations under the License.*</sub>
   
 ## Install torch with cuda support (https://pytorch.org/get-started/locally/)
 For Windows: 
-+ pip3 install torch torchvision torchaudio --index-url https[]()://download.pytorch.org/whl/cu121
-+ pip3 install immutabledict sentencepiece Flask
+   ```bash
+   pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+   pip3 install immutabledict sentencepiece Flask
+   ```
   
 For Linux: 
-+ pip3 install torch torchvision torchaudio immutabledict sentencepiece Flask
-+ pip3 install immutabledict sentencepiece Flask
+   ```bash
+   pip3 install torch torchvision torchaudio immutabledict sentencepiece Flask
+   pip3 install immutabledict sentencepiece Flask
+   ```
   
 Or install using Conda with: 
-+ conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+   ```bash
+   conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+   ```
   
 *** 
 ## Add the large language model to the project
@@ -55,10 +61,17 @@ Or install using Conda with:
 ## Methods to run
 Code is provided to test gemma models on a local computer. Three methods are provided:
 
++ Web browser - Enter the following and open the resulting IP in a browser:
+   ```bash
+   python3 web.py
+   ```
++ Command line - Enter the following and respond to prompts:
+   ```bash
+   python3 main.py
+   ```
 + Jupyter Notebook - In Jupyter, open pytorch_gemma.ipynb.
-+ Web UI - Enter "python3 web.py" at command line in project and open IP address shown in a browser.
-+ Command line - Enter "python3 main.py" at command line in project.
   
+   
 *** 
 ## Modify the parameters in the code as desired
 + The output_size indicates the max allowed for model output. 
