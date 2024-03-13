@@ -21,6 +21,9 @@ limitations under the License.*</sub>
 #### If you wish to add cuda and cudnn to your system:
 ##### https://developer.nvidia.com/cuda-downloads
 ##### https://developer.nvidia.com/cudnn-downloads
+
+## Python Install
+#### https://www.python.org/downloads/  
   
 ## Install torch with cuda support (https://pytorch.org/get-started/locally/)
 For Windows: 
