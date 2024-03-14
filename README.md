@@ -35,7 +35,6 @@ For Windows:
 For Linux: 
    ```bash
    pip3 install torch torchvision torchaudio immutabledict sentencepiece Flask
-   pip3 install immutabledict sentencepiece Flask
    ```
   
 Or install using Conda with: 
