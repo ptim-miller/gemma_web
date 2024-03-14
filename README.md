@@ -85,5 +85,10 @@ Code is provided to test gemma models on a local computer. Three methods are pro
 ## Recommended
 The code in this repository was tested with python 3.10 & 3.12, with Nvidia driver version 550.54.14.
 
+## Disclaimer
++ This is not a Google product. This project serves as an interface to Google's Gemma LLM.  
++ You must agree to Google's terms of service to utilize Gemma.  
++ Terms https://www.kaggle.com/models/google/gemma/license/consent  
+  
   
 
