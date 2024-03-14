@@ -10,8 +10,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
-# See https://ai.google.dev/gemma/docs/pytorch_gemma
+
 
 import os
 import torch
@@ -24,7 +23,10 @@ warnings.filterwarnings("ignore")
 # create class
 class GemmaModel:
     def __init__(self, output_len=50, version='2b-it', machine='cuda'):
-        self.output_len = output_len
+        self.output_len: int = output_len
+        self.temperature: float = 0.95
+        self.top_p: float = 1.0
+        self.top_k: int = 100
         self.version = version  # ['2b', '2b-it', '7b', '7b-it']
         self.machine = machine  # ['cuda', 'cpu']
         self.local_dir = f'./models/{version}'
@@ -44,9 +46,12 @@ class GemmaModel:
     def get_response(self, in_text):
         # print(f"Output limited to {self.output_len} words on a {self.device} device...")
         response = self.model.generate(
-            in_text,
+            prompts=in_text,
             device=self.device,
             output_len=self.output_len,
+            temperature=self.temperature,
+            top_p=self.top_p,
+            top_k=self.top_k
         )
         return response
 

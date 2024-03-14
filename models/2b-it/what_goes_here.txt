@@ -1,3 +1,2 @@
-Add config.json  gemma-2b-it.ckpt  tokenizer.model
-to this folder
+Add config.json  gemma-2b-it.ckpt  tokenizer.model to this folder
 

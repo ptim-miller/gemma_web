@@ -3,45 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <title>Language Model Test</title>
-    <script>
-        function showProgress() {
-          var x = document.getElementById("progress");
-          var y = document.getElementById("answerBlock");
-          x.style.display = "block";
-          y.innerHTML = "";
-        }
-    </script>
-    <link rel="stylesheet" href="static/custom.css">
+    <script src="static/custom.js"></script>
+    <link href="static/custom.css" rel="stylesheet">
+    <link href="static/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body>
-<form id="baseForm" action="/" method="POST">
-    <div class="comments">
-        <fieldset>
-            <legend>Select desired complexity of response:</legend>
-            <div>
-                <input type="radio" id="small" name="selected" value="100"/>
-                <label for="small">100 | </label>
-                <input type="radio" id="medium" name="selected" value="250" checked/>
-                <label for="medium">250 (default) | </label>
-                <input type="radio" id="large" name="selected" value="500"/>
-                <label for="large">500 | </label>
-                <input type="radio" id="huge" name="selected" value="2000"/>
-                <label for="huge">2000</label>
+<form action="/" id="baseForm" method="POST">
+    <div class="container">
+        <div class="col container">
+            <div class="row">
+                <div class="col split">
+                    <div class="row">
+                        <h3>User:</h3>
+                        Ask a question or make request.
+                    </div>
+                    <textarea id="description" class="textarea" onkeydown="grabText(this)"
+                              name="user_input" cols="40" rows="5"></textarea>
+                    <input id="bSubmit" onclick="showProgress()"
+                           type="submit" value="Query"/>
+                    <img alt="progress" id="progress" src="static/progress.gif">
+                </div>
+                <div class="col split">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <sub>Temp</sub>
+                        </div>
+                        <div class="col">
+                            <input max="1" min=".05" name="temp"
+                                   onchange="this.nextElementSibling.value = this.value"
+                                   step="0.05" type="range" value="{{temp}}"/>
+                            <output>{{temp}}</output>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <hr>
+                        <div class="col-sm-2">
+                            <sub>TOP_P</sub>
+                        </div>
+                        <div class="col">
+                            <input max="1" min=".05" name="top_p"
+                                   onchange="this.nextElementSibling.value = this.value"
+                                   step="0.05" type="range" value="{{top_p}}"/>
+                            <output>{{top_p}}</output>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <hr>
+                        <div class="col-sm-2">
+                            <sub>TOP_K</sub>
+                        </div>
+                        <div class="col">
+                            <input max="100" min="5" name="top_k"
+                                   onchange="this.nextElementSibling.value = this.value"
+                                   step="5" type="range" value="{{top_k}}"/>
+                            <output>{{top_k}}</output>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <hr>
+                        <div class="col-sm-2">
+                            <sub>Max_len</sub>
+                        </div>
+                        <div class="col">
+                            <input max="1000" min="50" name="words"
+                                   onchange="this.nextElementSibling.value = this.value"
+                                   step="50" type="range" value="{{words}}"/>
+                            <output>{{words}}</output>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </fieldset>
-        <h3>User:</h3>
-        Ask a question or make request.<br>
-        <textarea name="user_input" cols="60" rows="10"></textarea>
-        <input class="buttonSubmit" type="submit" value="Query" onclick="showProgress()"/>
-        <br>
-        <img id="progress" alt="progress" src="static/progress.gif">
+        </div>
     </div>
 </form>
 <form action="/" method="GET">
-    <h5></h5>
-    <div id="answerBlock" class="comments">
-        {{question}} ...<br><br>
-        {{answer}}
+    <div class="container">
+        <div class="col">
+            <div>
+                {{question}}
+            </div>
+            <div>
+                {{answer}}
+            </div>
+
+        </div>
     </div>
 </form>
 </body>
