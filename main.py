@@ -8,7 +8,7 @@ from pytorch_gemma  import GemmaModel
 # Unzip the downloaded archive.tar.gz and put the files under the "model/<version>/" folder
 model = GemmaModel(output_len=250, version='2b-it', machine='cuda')
 
-# Advance - customize the following, if you wish
+# Advanced - customize the following, if you wish
 # https://ivibudh.medium.com/a-guide-to-controlling-llm-model-output-exploring-top-k-top-p-and-temperature-parameters-ed6a31313910
 # https://medium.com/@daniel.puenteviejo/the-science-of-control-how-temperature-top-p-and-top-k-shape-large-language-models-853cb0480dae
 model.temperature = 0.95
