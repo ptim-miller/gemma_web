@@ -48,17 +48,17 @@ Or install using Conda with:
 + Version options are '2b', '2b-it', '7b', 7b-it'. The 'it' in name indicates an instruction-tuned model.   
 + Download the desired model from https://www.kaggle.com/models/google/gemma/frameworks/pyTorch.
   
-  <img src="models/model_download.png" alt="file download" width="600">
+  <img src="img/model_download.png" alt="file download" width="600">
   
 + <b>Recommend starting with 2b-it<b>. (Worked on a simple laptop with RTX2060 6GB VRAM).  
 + Extract contents from the downloaded archive.tar.gz and put the files under the 'model/\<version\>/' folder.  
   https://pureinfotech.com/extract-tar-gz-files-windows-11/
 
   In Jupyter they look something like:  
-  <img src="models/2b_it_pic.png" alt="file view" width="300">  
+  <img src="img/2b_it_pic.png" alt="file view" width="300">  
 
   In a file viewer they look something like:  
-  <img src="models/files.png" alt="file view" width="300">  
+  <img src="img/files.png" alt="file view" width="300">  
   
 ***
 ## Methods to run
