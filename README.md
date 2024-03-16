@@ -1,4 +1,4 @@
-# Wrapper to run Gemma (LLM) on a local computer 
+# Wrapper to run Gemma LLM on a local computer (Python/PyTorch)
   
 <sub>*Copyright 2024, PT Miller > For Academic Use  
 *Gemma folder Copyright 2024 Google distributed under Apache License, V2</sub> 
